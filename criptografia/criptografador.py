@@ -36,7 +36,7 @@ while x < 4:
 
 if opcao == 1:
     print('\n')
-    print( '-=' * 40)
+    print('-=' * 40)
     print('Descriptografador 2000')
     print('-=' * 40)
 

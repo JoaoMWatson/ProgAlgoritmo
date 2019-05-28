@@ -3,20 +3,21 @@ from string import ascii_lowercase
 
 alphabeto = list(ascii_lowercase)
 
-pronto = []
+sep_um = []
+
 
 def descriptografar(numeros):
     for i in numeros:
         x = numeros.split(i)
         x = int(i)
-        pronto.append(alphabeto[x])
-        for x in pronto:
+        sep_um.append(alphabeto[x])
+
+        for x in sep_um:
             print(f'{x}', end='')
-            pronto.remove(x)
+            sep_um.remove(x)
 
 
+print(sep_um)
 numeros = (str(input('Digite o codigo que sera descriptografado: '))).strip()
-
-
-print(numeros)
+print('O codigo descritografado é: ', end='')
 descriptografar(numeros)
