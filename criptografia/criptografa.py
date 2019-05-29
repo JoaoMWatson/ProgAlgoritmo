@@ -4,7 +4,7 @@ alphabeto = list(ascii_lowercase)
 print(alphabeto)
 arrayPalavra = []
 
-def criptografa(palavra):
+def criptografa(palavra, key):
     for i in palavra:
         x = palavra.split(i)
         x = str(i)
@@ -14,8 +14,9 @@ def criptografa(palavra):
             print(f'{x}', end='')
             arrayPalavra.remove(x)
 
+
 palavra = (str(input('Digite a frase que sera criptofrafada: '))).strip()
-print(arrayPalavra)
+key = int(input('Digite a chave da criptografia: '))
 
 print(f'A sua frase criptografada ficou: ', end='')
-criptografa(palavra)
+

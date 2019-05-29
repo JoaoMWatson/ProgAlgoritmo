@@ -11,7 +11,6 @@ def descriptografar(numeros):
         x = numeros.split(i)
         x = int(i)
         sep_um.append(alphabeto[x])
-
         for x in sep_um:
             print(f'{x}', end='')
             sep_um.remove(x)
