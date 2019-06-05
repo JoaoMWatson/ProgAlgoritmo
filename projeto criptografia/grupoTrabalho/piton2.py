@@ -9,50 +9,50 @@ arrayHexa = []
 key = 0
 
 
-def descriptografar(numero, key):
+def descriptografador(numero, key):
     for allP in range(len(numero)):
         for allA in range(len(alfabeto)):
             if(alfabeto[allA] == numero[allP]):
-                allA=allA+key
-                if allA<0:
-                    allA=allA+26
-                    print(alfabeto[allA],''+ numero[allP], + allA)
+                allA = allA+key
+                if allA < 0:
+                    allA = allA+26
+                    print(alfabeto[allA], '' + numero[allP], + allA)
                 else:
-                    if allA>25:
-                        allA=allA-26
-                        print(alfabeto[allA],''+ numero[allP], + allA)
+                    if allA > 25:
+                        allA = allA-26
+                        print(alfabeto[allA], '' + numero[allP], + allA)
                     else:
-                        print(alfabeto[allA],''+ numero[allP], + allA)
-            
+                        print(alfabeto[allA], '' + numero[allP], + allA)
+
 
 def criptografa(palavra, key):
     for allP in range(len(palavra)):
         for allA in range(len(alfabeto)):
             if(alfabeto[allA] == palavra[allP]):
-                allA=allA-key
-                if allA<0:
-                    allA=allA+26
-                    print(palavra[allP],''+ alfabeto[allA], + allA)
+                allA = allA-key
+                if allA < 0:
+                    allA = allA+26
+                    print(palavra[allP], '' + alfabeto[allA], + allA)
                 else:
-                    if allA>25:
-                        allA=allA-26
-                        print(palavra[allP],''+ alfabeto[allA], + allA)
+                    if allA > 25:
+                        allA = allA-26
+                        print(palavra[allP], '' + alfabeto[allA], + allA)
                     else:
-                        print(palavra[allP],''+ alfabeto[allA], + allA)
+                        print(palavra[allP], '' + alfabeto[allA], + allA)
 
-                        
+
 def descriptografador_auto(numero):
-    c=0
+    c = 0
     for k in range(26):
         for j in range(len(numero)):
             for i in range(len(alfabeto)):
                 if (alfabeto[i] == numero[j]):
-                    i=c-26+i
+                    i = c-26+i
                     print('{}'.format(alfabeto[i]), end='')
         print("\n--------")
-        c=c+1
+        c = c+1
 
-        
+
 def criptografa_hexa(palavra):
     for i in palavra:
         x = palavra.split(i)
@@ -60,9 +60,19 @@ def criptografa_hexa(palavra):
 
         arrayHexa.append(ord(x))
         for x in arrayHexa:
+            print(f'{arrayHexa}', end='')
+            arrayHexa.remove(x)
+
+
+def descriptografador_hexa(numero):
+    for i in numero:
+        x = int(i)
+
+        arrayHexa.append(chr(x))
+        for x in arrayHexa:
             print('{}'.format(arrayHexa), end='')
             arrayHexa.remove(x)
-                    
+
 
 print('~-' * 40)
 print('SUPER PROGRAMA DE CRIPTOGRAFIA UHUUUUL')
@@ -73,6 +83,7 @@ print("""MENU
 2- Descriptografador
 3- Descriptografador Automatico xD
 4- Criptografador Asc ii
+5- Descriptogradafor Asc ii
 0- Sair.
     """)
 
@@ -104,7 +115,7 @@ elif opcao == 2:
     numero = (str(input('Digite o codigo que sera descriptografado: '))).strip()
     key = int(input("Digite uma chave: "))
     print("Mensagem descriptografada é: ")
-    descriptografar(numero,key)
+    descriptografador(numero, key)
 
 elif opcao == 3:
     print('\n')
@@ -123,7 +134,16 @@ elif opcao == 4:
 
     palavra = input("Digite uma palavra: ")
     criptografa_hexa(palavra)
-    
+
+elif opcao == 5:
+    print('\n')
+    print('-=' * 40)
+    print('Descriptografador 3000')
+    print('-=' * 40)
+
+    numero = (str(input('Digite o codigo que sera descriptografado: '))).strip()
+    descriptografador_hexa(numero)
+
 elif opcao == 0:
     print('Encerrando o programa')
     print('Obrigado por escolher nossos serviços ^^')
