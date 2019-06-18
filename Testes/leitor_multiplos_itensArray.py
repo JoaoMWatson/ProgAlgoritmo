@@ -1,7 +1,7 @@
 from contextlib import suppress
 # Ignora o erro
 with suppress(Exception):
-    variavel = ("111105").strip()
+    variavel = str(input('digita numero: '))
     x = 3
     y = 0
     guardar = 0
