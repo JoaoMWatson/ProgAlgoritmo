@@ -12,11 +12,9 @@ with suppress(Exception):
             trio = palavra[comeco:fim]
             trio = int(trio)
             resultado.append(chr(trio))
-            # print('{}'.format(chr(trio)), end='')
+            print('{}'.format(chr(trio)), end='')
             comeco += 3
             fim += 3
-
-        return resultado
 
 
 def descriptografador(resultado, key):

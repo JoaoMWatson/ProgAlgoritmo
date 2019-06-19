@@ -10,7 +10,6 @@ alfabeto = list(ascii_lowercase)
 
 codigo = str(input('digite o codigo: '))
 key = int(input('Tente adivinhar a chave: '))
-
 x = 3
 y = 0
 guardar = 0

@@ -23,7 +23,7 @@ def descriptografador(numero, key):
                         print(alfabeto[allA], '' + numero[allP], + allA)
                     else:
                         print(alfabeto[allA], '' + numero[allP], + allA)
-
+ 
 
 def criptografa(palavra, key):
     for allP in range(len(palavra)):
@@ -49,7 +49,7 @@ def descriptografador_auto(numero):
                 if (alfabeto[i] == numero[j]):
                     i = c-26+i
                     print('{}'.format(alfabeto[i]), end='')
-        print("\n--------")
+        print("\n-------- ", c)
         c = c+1
 
 
