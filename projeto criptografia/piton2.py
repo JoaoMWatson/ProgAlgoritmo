@@ -89,11 +89,11 @@ print("""MENU
 
 
 opcao = int(input('Selecione uma opção: '))
-print('Processando informação', end='', flush='True')
-while x < 4:
-    print('.', end='', flush='True')
-    x += 1
-    sleep(0.3)
+# print('Processando informação', end='', flush='True')
+# while x < 4:
+#     print('.', end='', flush='True')
+#     x += 1
+#     sleep(0.3)
 
 
 if opcao == 1:

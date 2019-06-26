@@ -30,4 +30,3 @@ for allP in range(len(resultado)):
         if(alfabeto[allA] == resultado[allP]):
             allA = allA-key
             print(f'{alfabeto[allA]}', end='')
-
