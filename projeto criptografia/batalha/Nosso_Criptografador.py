@@ -22,6 +22,7 @@ for allP in range(len(palavra)):
             allA = allA-key
             resultado.append(alfabeto[allA])
 
+
 resultado = resultado[::-1]
          
 criptografa(resultado)
